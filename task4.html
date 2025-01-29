@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Post Scheduler</title>
+  <link rel="stylesheet" href="task4.css">
+</head>
+<body>
+  <div class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Progress Monitor</h2>
+      <ul id="progressList">
+        <li>No scheduled posts yet.</li>
+      </ul>
+    </aside>
+
+    <div class="content">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <h1>Post Scheduler</h1>
+        <ul class="nav-links">
+          <li><a href="#scheduler">Scheduler</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+          <li><a href="#settings">Settings</a></li>
+        </ul>
+      </nav>
+
+      <!-- Post Scheduler Section -->
+      <section id="scheduler" class="section">
+        <h2>Schedule Your Post</h2>
+        <form id="postForm">
+          <textarea id="postContent" placeholder="Write your post here..." required></textarea>
+          <label for="platform">Select Platform:</label>
+          <select id="platform" required>
+            <option value="">Choose a platform</option>
+            <option value="facebook">Facebook</option>
+            <option value="instagram">Instagram</option>
+            <option value="twitter">Twitter</option>
+          </select>
+          <label for="postDate">Choose Date & Time:</label>
+          <input type="datetime-local" id="postDate" required>
+          <button type="submit" class="btn">Schedule Post</button>
+        </form>
+      </section>
+
+      <!-- Analytics Section -->
+      <section id="analytics" class="section">
+        <h2>Analytics</h2>
+        <div class="analytics-cards">
+          <div class="card">
+            <h3>Total Posts</h3>
+            <p id="totalPosts">0</p>
+          </div>
+          <div class="card">
+            <h3>Platform Distribution</h3>
+            <p id="platformDistribution">N/A</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="task4.js"></script>
+</body>
+</html>
